@@ -1,6 +1,6 @@
 # VERIFY.md — Fresh-clone verification
 
-## Commit 942be05 (HEAD)
+## Commit 1c1c7bc (HEAD)
 
 Verified 2026-06-26.
 
@@ -16,13 +16,13 @@ Wrote 50 cases to cases/cases.jsonl (26187 bytes), tomllib_available=True
 $ python3 run_lab.py
 Results: results/results.jsonl (108968 bytes)
 Report: RESULTS.md
-  tomllib_loads_baseline: pass=46 fail=0 skip=4 time=6.13ms
+  tomllib_loads_baseline: pass=46 fail=0 skip=4 time=6.07ms
   tomllib_parse_float_decimal: pass=46 fail=0 skip=4 time=6.59ms
-  json_loads_config_baseline: pass=2 fail=0 skip=48 time=1.59ms
-  configparser_ini_baseline: pass=2 fail=0 skip=48 time=24.19ms
-  naive_key_value_split: pass=1 fail=40 skip=9 time=0.68ms
-  naive_comment_strip_then_split: pass=1 fail=40 skip=9 time=0.66ms
-  naive_type_guess_parser: pass=16 fail=25 skip=9 time=1.63ms
+  json_loads_config_baseline: pass=2 fail=0 skip=48 time=1.53ms
+  configparser_ini_baseline: pass=2 fail=0 skip=48 time=23.35ms
+  naive_key_value_split: pass=1 fail=40 skip=9 time=0.66ms
+  naive_comment_strip_then_split: pass=1 fail=40 skip=9 time=0.76ms
+  naive_type_guess_parser: pass=16 fail=25 skip=9 time=1.57ms
 ```
 
 All 50 cases generated deterministically (seed 42).
@@ -40,5 +40,6 @@ tomllib available: True
 
 ## Prior verifications
 
+- Commit `942be05` — also fresh-clone verified with identical results.
 - Commit `5ec10fc` — also fresh-clone verified with identical results.
 - Commit `0005bf7` — initial results commit; also fresh-clone verified with identical results.
