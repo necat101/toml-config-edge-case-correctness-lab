@@ -1,6 +1,6 @@
 # VERIFY.md — Fresh-clone verification
 
-## Commit 0005bf7 (HEAD)
+## Commit 5ec10fc (HEAD)
 
 Verified 2026-06-26.
 
@@ -14,15 +14,15 @@ $ python3 generate_cases.py
 Wrote 50 cases to cases/cases.jsonl (26187 bytes), tomllib_available=True
 
 $ python3 run_lab.py
-Results: results/results.jsonl (108926 bytes)
+Results: results/results.jsonl (108979 bytes)
 Report: RESULTS.md
-  tomllib_loads_baseline: pass=46 fail=0 skip=4 time=10.28ms
-  tomllib_parse_float_decimal: pass=46 fail=0 skip=4 time=10.88ms
-  json_loads_config_baseline: pass=2 fail=0 skip=48 time=2.56ms
-  configparser_ini_baseline: pass=2 fail=0 skip=48 time=39.11ms
-  naive_key_value_split: pass=1 fail=40 skip=9 time=1.15ms
-  naive_comment_strip_then_split: pass=1 fail=40 skip=9 time=1.12ms
-  naive_type_guess_parser: pass=16 fail=25 skip=9 time=2.84ms
+  tomllib_loads_baseline: pass=46 fail=0 skip=4 time=6.08ms
+  tomllib_parse_float_decimal: pass=46 fail=0 skip=4 time=6.59ms
+  json_loads_config_baseline: pass=2 fail=0 skip=48 time=1.55ms
+  configparser_ini_baseline: pass=2 fail=0 skip=48 time=23.73ms
+  naive_key_value_split: pass=1 fail=40 skip=9 time=0.65ms
+  naive_comment_strip_then_split: pass=1 fail=40 skip=9 time=0.64ms
+  naive_type_guess_parser: pass=16 fail=25 skip=9 time=1.60ms
 ```
 
 All 50 cases generated deterministically (seed 42).
@@ -35,3 +35,9 @@ All 50 cases generated deterministically (seed 42).
 
 Python: CPython 3.12.3 on Linux-6.17.0-1009-aws-x86_64-with-glibc2.39
 tomllib available: True
+
+---
+
+## Prior verification
+
+Commit `0005bf7` (initial results commit) was also fresh-clone verified with identical pass/fail/skip counts.
